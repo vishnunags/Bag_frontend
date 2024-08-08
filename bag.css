@@ -1,0 +1,134 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #291749; /* Background color */
+}
+
+header {
+    background-color: #291749; /* Header background color matches the body */
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+h1 {
+    color: #f4f4f4; /* Title color to contrast with the background */
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #291749; /* Match the header background */
+    border-bottom: 2px solid #f4f4f4; /* Optional: Add a bottom border to separate from buttons */
+    font-style: italic; /* Make the title italicized */
+}
+
+nav {
+    text-align: center; /* Center the buttons horizontally */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Display buttons in a row */
+    justify-content: center; /* Center the buttons */
+}
+
+nav ul li {
+    position: relative; /* Position relative for dropdown positioning */
+    margin: 0 10px; /* Space between buttons */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #f4f4f4;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 2px solid #f4f4f4;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #f4f4f4;
+    color: #291749;
+}
+
+/* Dropdown menu styles */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #291749;
+    border: 1px solid #f4f4f4;
+    border-radius: 5px;
+    z-index: 1000;
+    width: 300px; /* Increased width to accommodate submenus */
+}
+
+.dropdown-menu:hover .dropdown {
+    display: block;
+}
+
+.dropdown li {
+    position: relative; /* Position relative for submenu positioning */
+    margin: 0;
+}
+
+.dropdown li a {
+    display: block;
+    padding: 10px;
+    color: #f4f4f4;
+    border-bottom: 1px solid #f4f4f4; /* Add border between items */
+}
+
+.dropdown li a:hover {
+    background-color: #f4f4f4;
+    color: #291749;
+}
+
+/* Submenu styles */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: #291749;
+    border: 1px solid #f4f4f4;
+    border-radius: 5px;
+    width: 200px; /* Set a fixed width for the submenu */
+}
+
+.dropdown li:hover .submenu {
+    display: block;
+}
+
+.submenu li a {
+    padding: 10px;
+    color: #f4f4f4;
+    border-bottom: 1px solid #f4f4f4; /* Add border between items */
+}
+
+.submenu li a:hover {
+    background-color: #f4f4f4;
+    color: #291749;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+.image-container {
+    margin-top: 20px;
+    text-align: center; /* Center the image container */
+}
+
+.image-container img {
+    width: 100%; /* Ensure images take full width of the container */
+    max-width: 800px; /* Optional: Limit the maximum width of the image */
+    height: auto; /* Adjust height automatically to maintain aspect ratio */
+    object-fit: contain; /* Ensure the whole image is visible */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
