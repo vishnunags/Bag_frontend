@@ -34,7 +34,7 @@ nav ul {
 }
 
 nav ul li {
-    position: relative; /* Position relative for dropdown positioning */
+    position: relative; /* Position relative for mega menu positioning */
     margin: 0 10px; /* Space between buttons */
 }
 
@@ -53,7 +53,11 @@ nav ul li a:hover {
     color: #291749;
 }
 
-/* Dropdown menu styles */
+/* Mega menu styles */
+.dropdown-menu:hover .dropdown {
+    display: block;
+}
+
 .dropdown {
     display: none;
     position: absolute;
@@ -63,55 +67,60 @@ nav ul li a:hover {
     border: 1px solid #f4f4f4;
     border-radius: 5px;
     z-index: 1000;
-    width: 300px; /* Increased width to accommodate submenus */
-}
-
-.dropdown-menu:hover .dropdown {
-    display: block;
+    width: 300px; /* Set a fixed width for the dropdown */
 }
 
 .dropdown li {
-    position: relative; /* Position relative for submenu positioning */
-    margin: 0;
-}
-
-.dropdown li a {
-    display: block;
     padding: 10px;
+    border-bottom: 1px solid #f4f4f4; /* Add a border between items */
+}
+
+.dropdown li:last-child {
+    border-bottom: none; /* Remove the bottom border from the last item */
+}
+
+.dropdown a {
     color: #f4f4f4;
-    border-bottom: 1px solid #f4f4f4; /* Add border between items */
+    text-decoration: none;
 }
 
-.dropdown li a:hover {
-    background-color: #f4f4f4;
-    color: #291749;
+.dropdown a:hover {
+    color: #f4f4f4;
+    background-color: #291749;
 }
 
-/* Submenu styles */
 .submenu {
     display: none;
     position: absolute;
-    top: 0;
     left: 100%;
+    top: 0;
     background-color: #291749;
     border: 1px solid #f4f4f4;
     border-radius: 5px;
-    width: 200px; /* Set a fixed width for the submenu */
+    width: 200px; /* Width of the submenu */
+}
+
+.submenu li {
+    padding: 10px;
+    border-bottom: 1px solid #f4f4f4;
+}
+
+.submenu li:last-child {
+    border-bottom: none;
+}
+
+.submenu a {
+    color: #f4f4f4;
+    text-decoration: none;
+}
+
+.submenu a:hover {
+    color: #f4f4f4;
+    background-color: #291749;
 }
 
 .dropdown li:hover .submenu {
     display: block;
-}
-
-.submenu li a {
-    padding: 10px;
-    color: #f4f4f4;
-    border-bottom: 1px solid #f4f4f4; /* Add border between items */
-}
-
-.submenu li a:hover {
-    background-color: #f4f4f4;
-    color: #291749;
 }
 
 main {
